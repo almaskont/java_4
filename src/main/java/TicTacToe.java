@@ -142,7 +142,7 @@ public class TicTacToe {
     }
 
     private static boolean checkEnd(char symbol) {
-        if (checkWin2(symbol)) {
+        if (checkWin(symbol)) {
             if (symbol == DOT_HUMAN) {
                 System.out.println("\nУраааааааааааааа!! Вы победили!");
             } else {
@@ -172,36 +172,36 @@ public class TicTacToe {
 
     }
 
-    private static boolean checkWin(char symbol) {
-        if (MAP[0][0] == symbol && MAP[0][1] == symbol && MAP[0][2] == symbol) {
-            return true;
-        }
-        if (MAP[1][0] == symbol && MAP[1][1] == symbol && MAP[1][2] == symbol) {
-            return true;
-        }
-        if (MAP[2][0] == symbol && MAP[2][1] == symbol && MAP[2][2] == symbol) {
-            return true;
-        }
-
-        if (MAP[0][0] == symbol && MAP[1][0] == symbol && MAP[2][0] == symbol) {
-            return true;
-        }
-        if (MAP[0][1] == symbol && MAP[1][1] == symbol && MAP[2][1] == symbol) {
-            return true;
-        }
-        if (MAP[0][2] == symbol && MAP[1][2] == symbol && MAP[2][2] == symbol) {
-            return true;
-        }
-
-        if (MAP[0][0] == symbol && MAP[1][1] == symbol && MAP[2][2] == symbol) {
-            return true;
-        }
-        if (MAP[0][2] == symbol && MAP[1][1] == symbol && MAP[2][0] == symbol) {
-            return true;
-        }
-
-        return false;
-    }
+//    private static boolean checkWin(char symbol) {
+//        if (MAP[0][0] == symbol && MAP[0][1] == symbol && MAP[0][2] == symbol) {
+//            return true;
+//        }
+//        if (MAP[1][0] == symbol && MAP[1][1] == symbol && MAP[1][2] == symbol) {
+//            return true;
+//        }
+//        if (MAP[2][0] == symbol && MAP[2][1] == symbol && MAP[2][2] == symbol) {
+//            return true;
+//        }
+//
+//        if (MAP[0][0] == symbol && MAP[1][0] == symbol && MAP[2][0] == symbol) {
+//            return true;
+//        }
+//        if (MAP[0][1] == symbol && MAP[1][1] == symbol && MAP[2][1] == symbol) {
+//            return true;
+//        }
+//        if (MAP[0][2] == symbol && MAP[1][2] == symbol && MAP[2][2] == symbol) {
+//            return true;
+//        }
+//
+//        if (MAP[0][0] == symbol && MAP[1][1] == symbol && MAP[2][2] == symbol) {
+//            return true;
+//        }
+//        if (MAP[0][2] == symbol && MAP[1][1] == symbol && MAP[2][0] == symbol) {
+//            return true;
+//        }
+//
+//        return false;
+//    }
 
     private static boolean isContinueGame() {
         System.out.println("Хотите продолжить? y\\n");
@@ -216,7 +216,7 @@ public class TicTacToe {
         System.out.println("Ты заходи, если что");
     }
 
-    private static boolean checkWin2(char symbol) {
+    private static boolean checkWin(char symbol) {
         return mainDiagonal(symbol) || secondaryDiagonal(symbol) || horizontalLines(symbol) || verticalLines(symbol);
     }
 
